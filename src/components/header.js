@@ -6,36 +6,24 @@ import { StaticImage } from "gatsby-plugin-image"
 const Header = ({ siteTitle }) => (
   <header
     style={{
+      borderColor: 'lightslategray',
+      borderStyle: 'solid 5px',
       background: `lightslategray`,
-      background: '#bdc3c7', /* fallback for old browsers */
-      background: '-webkit-linear-gradient(to right, #bdc3c7, #2c3e50)' /* Chrome 10-25, Safari 5.1-6 */,
-      background: 'linear-gradient(to right, #bdc3c7, #2c3e50)',
-      marginBottom: `1.45rem`,
     }}
   >
     <div
       style={{
-        // maxWidth: 960,
-        // padding: `1.45rem 1.0875rem`,
-        // margin: `0 auto`,
-        width: '200px',
-        height: '135px',
-        marginLeft: '42vw',
-        borderRadius: '40px',
+        // height: '5vw',
+        // marginLeft: '42vw',
+        // borderRadius: '40px',
+        top: '100px',
+        display: 'flex',
+        justifyContent: 'space-evenly',
+        paddingTop: '1vw'
 
       }}
     >
-      <StaticImage
-        src="../images/cmc-logo.png"
-        formats={["AUTO", "WEBP", "AVIF"]}
-        alt="A Gatsby astronaut"
-        style={{
-          marginTop: '10px',
-          borderRadius: '15px',
-          opacity: 0.1
-        }}
-      />
-      {/* <h1 style={{ margin: 0 }}>
+      <h2 >
         <Link
           to="/"
           style={{
@@ -43,9 +31,31 @@ const Header = ({ siteTitle }) => (
             textDecoration: `none`,
           }}
         >
-          {siteTitle}
+          Home.
         </Link>
-      </h1> */}
+      </h2>
+      <h2 >
+        <Link
+          to="/commercial"
+          style={{
+            color: `white`,
+            textDecoration: `none`,
+          }}
+        >
+          Commercial.
+        </Link>
+      </h2>
+      <h2 >
+        <Link
+          to="/residential"
+          style={{
+            color: `white`,
+            textDecoration: `none`,
+          }}
+        >
+          Residential.
+        </Link>
+      </h2>
     </div>
   </header>
 )
